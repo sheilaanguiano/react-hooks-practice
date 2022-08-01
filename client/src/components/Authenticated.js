@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import Context from '../Context';
 
-export default ({ context  }) => {
+/* the useContext hook takes the context object as an argument and returns the current context  */
+
+
+export default () => {
+  let context = useContext(Context.Context);
   const authUser = context.authenticatedUser;
   return (
   <div className="bounds">
